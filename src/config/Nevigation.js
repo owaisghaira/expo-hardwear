@@ -5,7 +5,8 @@ import Home from '../screens/Home'
 import About from '../screens/About'
 import { Image } from 'react-native'
 import CameraApp from '../screens/camera'
-
+import ImagePickerExampl from '../screens/Gallery'
+import Map from '../screens/Map'
 const Stack = createStackNavigator();
 
 function Navegation() {
@@ -23,7 +24,9 @@ function Navegation() {
                     }}
                     name="Home" component={Home} />
                 <Stack.Screen name="About" component={About} />
-            <Stack.Screen name="Camera" component={CameraApp} />
+                <Stack.Screen name="Camera" component={CameraApp} />
+                <Stack.Screen name="ImagePicker" component={ImagePickerExampl} />
+                <Stack.Screen name="map" component={Map} />
 
             </Stack.Navigator>
         </NavigationContainer>

@@ -6,16 +6,34 @@ function Home(props) {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <Button style={{margin:20}}
-          onPress={() =>
-            props.navigation.navigate("About", { name: 'owais' })}
-          title='Go to about'
-        />
-        <Button style={{  }}
-          onPress={() =>
-            props.navigation.navigate("Camera")}
-          title='Go to camera'
-        />
+        <View style={styles.mar}>
+          <Button style={{ margin: 20 }}
+            onPress={() =>
+              props.navigation.navigate("About", { name: 'owais' })}
+            title='Go to about'
+          />
+        </View>
+        <View style={styles.mar}>
+          <Button style={{}}
+            onPress={() =>
+              props.navigation.navigate("Camera")}
+            title='Go to camera'
+          />
+        </View>
+        <View style={styles.mar}>
+          <Button style={{ margin: 20 }}
+            onPress={() =>
+              props.navigation.navigate("ImagePicker")}
+            title='Go to Gallery'
+          />
+        </View>
+        <View style={styles.mar}>
+          <Button style={{ margin: 20 }}
+            onPress={() =>
+              props.navigation.navigate("map")}
+            title='Go to map'
+          />
+        </View>
         {arr.map((v, i) => {
           return (
             <View key={i} style={styles.card}>
@@ -51,6 +69,9 @@ const styles = StyleSheet.create({
     shadowRadius: 4.65,
 
     elevation: 8,
+  },
+  mar: {
+    margin: 10
   }
 });
 
